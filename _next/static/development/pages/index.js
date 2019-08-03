@@ -8351,6 +8351,11 @@ var categorizedRoutes = [{
     path: "/html-entities",
     title: "Character Entity Reference Chart",
     desc: "Character Entity Reference Chart"
+  }, {
+    label: "MIME Types",
+    path: "/mime-list",
+    title: "Complete List of MIME Types, Searchable",
+    desc: "Complete List of MIME Types, Searchable"
   }]
 }, {
   category: "Word",
