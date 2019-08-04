@@ -89,7 +89,7 @@ var _jsxFileName = "/Users/terry/transform/components/ShareButton/Widget.tsx";
       setShareAll = _useState2[1];
 
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "share-widget " + (shareall ? "share-all" : ""),
+    className: "share-widget hidden-print " + (shareall ? "share-all" : ""),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -99,7 +99,7 @@ var _jsxFileName = "/Users/terry/transform/components/ShareButton/Widget.tsx";
     sites: ["facebook", "twitter", "weibo", "line", "gmail", "digg", "reddit", "linkedin", "douban", "qzone"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
   }), !shareall && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_1__["Pane"], {
@@ -111,7 +111,7 @@ var _jsxFileName = "/Users/terry/transform/components/ShareButton/Widget.tsx";
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
@@ -119,7 +119,7 @@ var _jsxFileName = "/Users/terry/transform/components/ShareButton/Widget.tsx";
     color: "muted",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   })));
