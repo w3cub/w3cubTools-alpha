@@ -54876,6 +54876,11 @@ var categorizedRoutes = [{
     title: "Web Colors Chart",
     desc: "Web Colors Chart"
   }, {
+    label: "Open Color",
+    path: "/open-color",
+    title: "Open color schemes",
+    desc: "Open color schemes"
+  }, {
     label: "Gradient Colors",
     path: "/gradient-color",
     title: "Gradient Colors Collection Palette",
