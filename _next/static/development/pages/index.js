@@ -8368,7 +8368,8 @@ var categorizedRoutes = [{
     label: "Chinese Stroke",
     path: "/write-chinese",
     title: "How to write Chinese(笔顺)",
-    desc: "How to write Chinese, Chinese Stroke(中文笔顺)"
+    desc: "How to write Chinese, Chinese Stroke(中文笔顺)",
+    scripts: ['/static/dict/pinyin.js']
   }]
 }, {
   category: "Random",
@@ -8604,7 +8605,7 @@ var categorizedRoutes = [{
     packageUrl: "https://github.com/bcherny/json-schema-to-typescript"
   }, {
     label: "to OpenAPI Schema",
-    path: "json-schema-to-openapi-schema",
+    path: "/json-schema-to-openapi-schema",
     packageName: "json-schema-to-openapi-schema",
     packageUrl: "https://github.com/wework/json-schema-to-openapi-schema"
   }]
@@ -8720,7 +8721,7 @@ var routes = lodash_flatten__WEBPACK_IMPORTED_MODULE_2___default()(categorizedRo
       return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, x, {
         category: a.category,
         searchTerm: _label,
-        desc: x.desc || "An online Repl to convert ".concat(_label)
+        desc: x.desc || "Online convert ".concat(_label, ", automatically faster")
       });
     })
   );
