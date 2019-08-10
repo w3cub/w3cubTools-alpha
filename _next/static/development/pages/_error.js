@@ -53981,7 +53981,13 @@ var categorizedRoutes = [{
     path: "/write-chinese",
     title: "How to write Chinese(笔顺)",
     desc: "How to write Chinese, Chinese Stroke(中文笔顺)",
-    scripts: ['/static/dict/pinyin.js']
+    scripts: ["/static/dict/pinyin.js"]
+  }, {
+    label: "中文转拼音",
+    path: "/chinese-to-pinyin",
+    title: "中文转拼音，在线速查，朗读",
+    desc: "中文转拼音，在线速查，朗读发音",
+    scripts: ["/static/dict/pinyin.js"]
   }]
 }, {
   category: "Random",
@@ -54351,7 +54357,7 @@ function activeRouteData(pathname) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 7:
 /*!************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FUsers%2Fterry%2Ftransform%2Fpages%2F_error.tsx ***!
   \************************************************************************************************************************/
@@ -54374,5 +54380,5 @@ module.exports = dll_67fd39c255e518cbcc2b;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[7,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map
