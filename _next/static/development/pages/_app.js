@@ -54910,6 +54910,11 @@ var categorizedRoutes = [{
     title: "中文转拼音，在线速查，朗读",
     desc: "中文转拼音，在线速查，朗读发音",
     scripts: ["/static/dict/pinyin.js"]
+  }, {
+    label: "Japanese 五十音図",
+    path: "/japanese-syllabary",
+    title: "五十音図, ごじゅうおんず, 五十音图, Hiragana",
+    desc: "五十音図, ごじゅうおんず, 五十音图, Hiragana"
   }]
 }, {
   category: "Random",
