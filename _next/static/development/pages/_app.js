@@ -54869,6 +54869,14 @@ var categorizedRoutes = [{
     desc: "Gomoku Game with computer"
   }]
 }, {
+  category: "Video",
+  content: [{
+    label: "Youtube Downloader",
+    path: "/youtube-downloader",
+    title: "YouTube Downloader",
+    desc: "Online download videos from YouTube for FREE to PC, mobile. Supports downloading all formats: MP4, 3GP, WebM, HD videos, convert YouTube to MP3, M4A."
+  }]
+}, {
   category: "Chart",
   content: [{
     label: "Web Colors",
@@ -55024,7 +55032,7 @@ var categorizedRoutes = [{
     path: "/vue-to-react",
     title: "Vue to React Online Converter",
     desc: "Vue to React Online Converter",
-    scripts: ["https://bundle.run/@w3cub/vue-to-react@1.2.1"]
+    scripts: ["/static/bundle/vue-to-react@1.2.1.js"]
   }]
 }, {
   category: "Fortune",

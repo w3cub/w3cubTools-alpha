@@ -8335,6 +8335,14 @@ var categorizedRoutes = [{
     desc: "Gomoku Game with computer"
   }]
 }, {
+  category: "Video",
+  content: [{
+    label: "Youtube Downloader",
+    path: "/youtube-downloader",
+    title: "YouTube Downloader",
+    desc: "Online download videos from YouTube for FREE to PC, mobile. Supports downloading all formats: MP4, 3GP, WebM, HD videos, convert YouTube to MP3, M4A."
+  }]
+}, {
   category: "Chart",
   content: [{
     label: "Web Colors",
@@ -8490,7 +8498,7 @@ var categorizedRoutes = [{
     path: "/vue-to-react",
     title: "Vue to React Online Converter",
     desc: "Vue to React Online Converter",
-    scripts: ["https://bundle.run/@w3cub/vue-to-react@1.2.1"]
+    scripts: ["/static/bundle/vue-to-react@1.2.1.js"]
   }]
 }, {
   category: "Fortune",
@@ -8750,7 +8758,7 @@ function activeRouteData(pathname) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*****************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fterry%2Ftransform%2Fpages%2Findex.tsx ***!
   \*****************************************************************************************************************/
@@ -8773,5 +8781,5 @@ module.exports = dll_67fd39c255e518cbcc2b;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
