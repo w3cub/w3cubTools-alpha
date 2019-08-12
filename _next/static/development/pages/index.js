@@ -8757,7 +8757,7 @@ function activeRouteData(pathname) {
 
 /***/ }),
 
-/***/ 6:
+/***/ 2:
 /*!*****************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fterry%2Ftransform%2Fpages%2Findex.tsx ***!
   \*****************************************************************************************************************/
@@ -8780,5 +8780,5 @@ module.exports = dll_67fd39c255e518cbcc2b;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
