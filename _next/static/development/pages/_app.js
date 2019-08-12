@@ -54874,7 +54874,7 @@ var categorizedRoutes = [{
     label: "Youtube Downloader",
     path: "/youtube-downloader",
     title: "YouTube Downloader",
-    desc: "Online download videos from YouTube for FREE to PC, mobile. Supports downloading all formats: MP4, 3GP, WebM, HD videos, convert YouTube to MP3, M4A."
+    desc: "Online download videos from YouTube for FREE to PC mobile"
   }]
 }, {
   category: "Chart",
@@ -55006,6 +55006,11 @@ var categorizedRoutes = [{
 }, {
   category: "Tools",
   content: [{
+    label: "Meta Tag Generator",
+    path: "/meta-tag-generator",
+    title: "Online Meta Tag Generator, Support facebook and twitter",
+    desc: "Online Meta Tag Generator, Support facebook and twitter"
+  }, {
     label: "Curl builder",
     path: "/curl-builder",
     title: "Online curl command line builder",
@@ -55236,7 +55241,7 @@ var categorizedRoutes = [{
     path: "/jsonld-to-framed"
   }, {
     label: "to Normalized",
-    path: "jsonld-to-normalized"
+    path: "/jsonld-to-normalized"
   }].map(function (x) {
     return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, x, {
       packageName: "jsonld",
@@ -55281,8 +55286,8 @@ var routes = lodash_flatten__WEBPACK_IMPORTED_MODULE_2___default()(categorizedRo
 }).concat({
   label: "W3cubTools",
   path: "/",
-  title: "W3cubTools | All Free, Collections of Tools For Developers and Family",
-  desc: "W3cubTools | All Free, Collections of Tools For Developers and Family"
+  title: "W3cubTools | all free, collections of tools for developers and family",
+  desc: "Provide tools for developers and their family, to improve using HTML, Meta Tag, React, CSS, JavaScript, Color, SQL, SVG, GraphQL, JSON, Chinese, Japanese, Math and Game skills."
 }));
 function activeRouteData(pathname) {
   return lodash_find__WEBPACK_IMPORTED_MODULE_3___default()(routes, function (o) {
