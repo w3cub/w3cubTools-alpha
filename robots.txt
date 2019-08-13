@@ -1,0 +1,3 @@
+Sitemap: https://tools.w3cub.com/sitemap.xml
+User-agent: *
+Disallow:  
