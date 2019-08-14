@@ -538,6 +538,229 @@ h6 {
   background: #0077b5;
 }
 
+.modal-loading {
+  text-align: center;
+  min-height: 250px;
+  line-height: 250px;
+}
+
+.output-options {
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.output-options > * {
+  margin-right: 10px;
+}
+
+.output-options label {
+  font-size: 13px;
+  color: #333;
+}
+
+.play-delay-input {
+  width: 40px;
+  padding: 6px 10px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  outline: none;
+}
+
+.save-btn {
+  float: right;
+  margin-right: 0;
+}
+
+.output-text-wrapper {
+  padding: 20px;
+}
+
+.output-text-block {
+  max-height: calc(100vh - 260px);
+  max-width: 90vw;
+  width: max-content;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 12px;
+  border: 1px solid #333;
+  overflow: auto;
+}
+
+.output-text-block pre {
+  margin: 0;
+  padding: 0;
+}
+
+.transform-setting label {
+  display: block;
+  font-size: 14px;
+  margin: 5px 0;
+}
+/* 
+.transform-setting select,
+.transform-setting input {
+  background-color: transparent;
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  outline: none;
+}
+
+.transform-setting select:focus,
+.transform-setting input:focus {
+  border: 1px solid #333;
+} */
+
+.upload-image-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 40px auto 20px;
+  border: 2px dashed rgba(127, 150, 255, 0.5);
+}
+
+.upload-image-block:hover,
+.upload-image-block.active {
+  cursor: pointer;
+  border: 2px dashed rgba(127, 150, 255, 1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.upload-label {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 25px;
+  color: rgba(127, 150, 255, 0.5);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-image-block:hover .upload-label,
+.upload-image-block.active .upload-label {
+  color: rgba(127, 150, 255, 1);
+}
+
+@media screen and (max-width: 440px) {
+  .upload-image-block {
+    margin: 40px 20px 20px;
+  }
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.preview-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.preview-image[src=""] {
+  visibility: hidden;
+}
+
+.imt-container {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  color: #333;
+}
+.imt-container .row {
+  display: flex;
+  flex-direction: row;
+}
+.imt-container .left {
+  float: left;
+}
+.imt-container .right {
+  float: right;
+}
+.imt-container .clear {
+  float: none;
+  overflow: hidden;
+}
+.imt-container .text-center {
+  text-align: center;
+}
+.imt-container .btn {
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: #333;
+  border: 1px solid #333;
+  background-color: transparent;
+  transition: all 0.05s ease 0s;
+}
+.imt-container .btn:hover {
+  border: 1px solid #000;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.imt-container .btn:active {
+  background-color: #ffc864;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px #ffffff;
+  color: #fff;
+}
+.imt-container .divide {
+  display: block;
+  height: 0px;
+  border-bottom: 1px solid #666;
+}
+.transform-size-input {
+  width: 160px;
+}
+.transform-placeholder-input {
+  width: 160px;
+}
+.transform-settings-wrapper {
+  margin: 20px auto;
+  max-width: 700px;
+  justify-content: space-between;
+}
+.helps {
+  width: 620px;
+  margin: auto;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+@media screen and (max-width: 675px) {
+  .transform-settings-wrapper {
+    flex-direction: column;
+    margin: 0.5rem 1rem;
+  }
+  .transform-settings-wrapper > * {
+    margin: 0.5rem 0;
+  }
+  .transform-settings-wrapper .btn {
+    padding: 7px 15px;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .helps {
+    margin: 0 10px;
+    text-align: left;
+  }
+}
+.copyright {
+  font-size: 12px;
+  color: #999;
+}
+.copyright a {
+  color: #999;
+}
+.copyright a:hover {
+  color: #333;
+}
+
 @font-face {
   font-family: octicons-link;
   src: url(data:font/woff;charset=utf-8;base64,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)

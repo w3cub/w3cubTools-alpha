@@ -55142,6 +55142,12 @@ var categorizedRoutes = [{
     desc: "This tool help you convert the images to png, jpg, gif, bmp, free online, faster, No sign-up required.",
     keywords: "Image converter, Picture format converter, png format converter, jpg format converter, gif format converter, bmp format converter",
     scripts: ["//cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"]
+  }, {
+    label: "Image to Ascii Art",
+    path: "/image-to-text",
+    title: "online image to ascii art code, 在线图片转字符画",
+    desc: "This tool help you convert Image to ascii art code online. 在线图片转字符画",
+    keywords: "Image ascii art, Image ascii art converter, Image ascii converter"
   }]
 }, {
   category: "Tools",
