@@ -96,7 +96,7 @@ function (_React$Component) {
               };
 
               _context.next = 3;
-              return fetch('/static/demo.png');
+              return fetch("/static/demo.png");
 
             case 3:
               res = _context.sent;
@@ -105,7 +105,7 @@ function (_React$Component) {
 
             case 6:
               value = _context.sent;
-              file = blobToFile(value, 'demo.png');
+              file = blobToFile(value, "demo.png");
 
               _this.imagePreview.current.previewImage(file);
 
@@ -299,9 +299,9 @@ function (_React$Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         style: {
-          margin: 'auto',
-          marginTop: '15px',
-          textAlign: 'center'
+          margin: "auto",
+          marginTop: "15px",
+          textAlign: "center"
         },
         __source: {
           fileName: _jsxFileName,
@@ -319,7 +319,7 @@ function (_React$Component) {
         __self: this
       }, "Demo Image", react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("span", {
         style: {
-          display: 'none'
+          display: "none"
         },
         __source: {
           fileName: _jsxFileName,
@@ -329,7 +329,7 @@ function (_React$Component) {
       }, "Welcome to GZ https://www.youtube.com/watch?v=DpRpahhJoJE"))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_component_Row__WEBPACK_IMPORTED_MODULE_15__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 168
+          lineNumber: 170
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_component_ImagePreviewUpload__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -340,7 +340,7 @@ function (_React$Component) {
         ref: this.imagePreview,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 171
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_component_FramesModal__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -349,7 +349,7 @@ function (_React$Component) {
         file: this.state.file,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 179
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(evergreen_ui__WEBPACK_IMPORTED_MODULE_12__["Alert"], {
@@ -359,7 +359,7 @@ function (_React$Component) {
         marginBottom: 32,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 184
         },
         __self: this
       }));
@@ -45217,7 +45217,7 @@ var _jsxFileName = "/Users/terry/transform/pages/image-to-text.tsx";
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!**************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fimage-to-text&absolutePagePath=%2FUsers%2Fterry%2Ftransform%2Fpages%2Fimage-to-text.tsx ***!
   \**************************************************************************************************************************************/
@@ -45240,5 +45240,5 @@ module.exports = dll_67fd39c255e518cbcc2b;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=image-to-text.js.map
