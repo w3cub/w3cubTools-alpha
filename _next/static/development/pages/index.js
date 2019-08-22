@@ -8535,7 +8535,7 @@ var categorizedRoutes = [{
     title: "Vue to React Online Converter",
     desc: "This tool help you convert Vue  code to React code Online Converter, use AST transformation to implemented.",
     keywords: "vue to react converter, react converter, vue converter",
-    scripts: ["/static/bundle/vue-to-react@1.2.1.js"]
+    scripts: ["/static/bundle/vue-to-react@1.4.1.js"]
   }, {
     label: "React to Vue",
     path: "/react-to-vue",
