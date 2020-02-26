@@ -54989,8 +54989,14 @@ var categorizedRoutes = [{
 }, {
   category: "Video",
   content: [{
+    label: "微博秒拍视频视频下载",
+    path: "https://weibomiaopai.com/",
+    title: "YouTube Downloader",
+    desc: "Online download videos from YouTube for FREE to PC, mobile",
+    keywords: "youTube downloader, youtube mp4 downloader, fast youtube downloader, easy youtube downloader"
+  }, {
     label: "Youtube Downloader",
-    path: "/youtube-downloader",
+    path: "https://www.savefrom.net/",
     title: "YouTube Downloader",
     desc: "Online download videos from YouTube for FREE to PC, mobile",
     keywords: "youTube downloader, youtube mp4 downloader, fast youtube downloader, easy youtube downloader"
