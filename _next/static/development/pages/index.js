@@ -77,6 +77,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "./no
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/parse-int */ "./node_modules/core-js/library/fn/parse-int.js");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
@@ -330,6 +341,19 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 
 __webpack_require__(/*! ../../modules/es6.object.keys */ "./node_modules/core-js/library/modules/es6.object.keys.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.keys;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/parse-int.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/library/fn/parse-int.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../modules/es6.parse-int */ "./node_modules/core-js/library/modules/es6.parse-int.js");
+module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").parseInt;
 
 
 /***/ }),
@@ -1407,6 +1431,26 @@ module.exports = function (KEY, exec) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/_parse-int.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/_parse-int.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $parseInt = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js").parseInt;
+var $trim = __webpack_require__(/*! ./_string-trim */ "./node_modules/core-js/library/modules/_string-trim.js").trim;
+var ws = __webpack_require__(/*! ./_string-ws */ "./node_modules/core-js/library/modules/_string-ws.js");
+var hex = /^[-+]?0[xX]/;
+
+module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? function parseInt(str, radix) {
+  var string = $trim(String(str), 3);
+  return $parseInt(string, (radix >>> 0) || (hex.test(string) ? 16 : 10));
+} : $parseInt;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/_property-desc.js":
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_property-desc.js ***!
@@ -1519,6 +1563,60 @@ module.exports = function (TO_STRING) {
       : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
   };
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/_string-trim.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/_string-trim.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
+var defined = __webpack_require__(/*! ./_defined */ "./node_modules/core-js/library/modules/_defined.js");
+var fails = __webpack_require__(/*! ./_fails */ "./node_modules/core-js/library/modules/_fails.js");
+var spaces = __webpack_require__(/*! ./_string-ws */ "./node_modules/core-js/library/modules/_string-ws.js");
+var space = '[' + spaces + ']';
+var non = '\u200b\u0085';
+var ltrim = RegExp('^' + space + space + '*');
+var rtrim = RegExp(space + space + '*$');
+
+var exporter = function (KEY, exec, ALIAS) {
+  var exp = {};
+  var FORCE = fails(function () {
+    return !!spaces[KEY]() || non[KEY]() != non;
+  });
+  var fn = exp[KEY] = FORCE ? exec(trim) : spaces[KEY];
+  if (ALIAS) exp[ALIAS] = fn;
+  $export($export.P + $export.F * FORCE, 'String', exp);
+};
+
+// 1 -> String#trimLeft
+// 2 -> String#trimRight
+// 3 -> String#trim
+var trim = exporter.trim = function (string, TYPE) {
+  string = String(defined(string));
+  if (TYPE & 1) string = string.replace(ltrim, '');
+  if (TYPE & 2) string = string.replace(rtrim, '');
+  return string;
+};
+
+module.exports = exporter;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/_string-ws.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/_string-ws.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
+  '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
 
 
 /***/ }),
@@ -1901,6 +1999,21 @@ __webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules
     return $keys(toObject(it));
   };
 });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/es6.parse-int.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es6.parse-int.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
+var $parseInt = __webpack_require__(/*! ./_parse-int */ "./node_modules/core-js/library/modules/_parse-int.js");
+// 18.2.5 parseInt(string, radix)
+$export($export.G + $export.F * (parseInt != $parseInt), { parseInt: $parseInt });
 
 
 /***/ }),
@@ -8074,7 +8187,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "escape", function() { return escape; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unescape", function() { return unescape; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ucfirst", function() { return ucfirst; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
 //@ts-nocheck
+
 
 
 var escapeHtmlArray = {
@@ -8225,6 +8341,54 @@ function unLink(url) {
   return link || (link = makeLink("adurl", url)), link;
 }
 
+function shuffle(str) {
+  var a = str.split(""),
+      a = a.map(function (it, index) {
+    return {
+      value: it,
+      index: index.toString(32)
+    };
+  }),
+      n = a.length;
+
+  for (var i = n - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i];
+    a[i] = a[j];
+    a[j] = tmp;
+  }
+
+  return a.map(function (item) {
+    return item.value;
+  }).join("") + " // " + a.map(function (item) {
+    return item.index;
+  }).join(",");
+}
+
+function escapeShuffle(str) {
+  return shuffle(str);
+}
+
+function unEscapeShuffle(str) {
+  if (~str.indexOf(" // ")) {
+    var strAll = str.split(" // ");
+    str = strAll[0].split("");
+    var sortkey = strAll[1].split(",");
+    str = str.map(function (item, index) {
+      return {
+        index: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(sortkey[index], 32) || 0,
+        value: item
+      };
+    }).sort(function (v1, v2) {
+      return v1.index - v2.index;
+    }).map(function (v) {
+      return v.value;
+    }).join("");
+  }
+
+  return str;
+}
+
 function escape(type, value) {
   var v = value;
 
@@ -8240,6 +8404,8 @@ function escape(type, value) {
     v = escapeCSV(v);
   } else if ("un" == type) {
     v = unLink(v);
+  } else if ("shuffle" == type) {
+    v = escapeShuffle(v);
   }
 
   return v;
@@ -8257,6 +8423,8 @@ function unescape(type, value) {
     r = unEscapeSQL(r);
   } else if ("csv" == type) {
     r = unEscapeCSV(r);
+  } else if ("shuffle" == type) {
+    r = unEscapeShuffle(r);
   }
 
   return r;
@@ -8328,7 +8496,7 @@ var categorizedRoutes = [{
 }, {
   category: "Video",
   content: [{
-    label: "微博秒拍视频视频下载",
+    label: "Video Download",
     path: "https://weibomiaopai.com/",
     title: "YouTube Downloader",
     desc: "Online download videos from YouTube for FREE to PC, mobile",
@@ -8378,16 +8546,16 @@ var categorizedRoutes = [{
   content: [{
     label: "Chinese Stroke",
     path: "/write-chinese",
-    title: "How to write Chinese(笔顺)",
-    desc: "How to write Chinese, Chinese Stroke(中文笔顺), tell you how to write chinese, and voice to speak",
+    title: "How to write Chinese",
+    desc: "How to write Chinese, Chinese Stroke, tell you how to write chinese, and voice to speak",
     keywords: "chinese stroke, write chinese, speak chinese",
     scripts: ["/static/dict/pinyin.js"]
   }, {
-    label: "中文转拼音",
+    label: "Chinese to Pinyin",
     path: "/chinese-to-pinyin",
-    title: "中文转拼音，在线速查，朗读",
-    desc: "中文转拼音，在线速查，朗读发音, 点击功能按钮进行转换，快速转换无延时，请求朗读功能有惊喜",
-    keywords: "中文转拼音, 在线速查, 朗读发音",
+    title: "Chinese convert to Pinyin，searchable，readable",
+    desc: "Chinese convert to Pinyin, searchable，readable",
+    keywords: "Chinese Pinyin",
     scripts: ["/static/dict/pinyin.js"]
   }, {
     label: "Japanese 五十音図",
@@ -8410,6 +8578,12 @@ var categorizedRoutes = [{
     title: "Random Mac Generator",
     desc: "online Random Mac address Generator. This tools help you generate the random hex string, you can setting the string len and how many time you generate.",
     keywords: "random generate Mac address, Random mac address, Random Mac address Generator, random"
+  }, {
+    label: "Shuffle Twitter",
+    path: "/shuffle-twitter",
+    title: "Shuffle Twitter",
+    desc: "Shuffle Twitter, help you bypass censorship.",
+    keywords: "Shuffle Twitter, Shuffle weibo, spread accessible channel"
   }]
 }, {
   category: "Hash",
@@ -8553,15 +8727,15 @@ var categorizedRoutes = [{
 }, {
   category: "Fortune",
   content: [{
-    label: "程序员老黄历",
+    label: "Programmer Calenar",
     path: "/huangli",
     title: "程序员老黄历, 据说很灵",
     desc: "程序员老黄历查询，通用版本程序员老黄历示例, react版程序员老黄历, react程序员老黄历原理，react程序员老黄历实现",
     keywords: "程序员老黄历, 程序员老黄历示例， react"
   }, {
-    label: "程序员求签",
+    label: "Programmer Divination",
     path: "/qiuqian",
-    title: "程序员求签, 求出好运程",
+    title: "Programmer Divination chinese version",
     desc: "程序员求签, 通用版本程序员求签示例, react版程序员求签, react程序员求签原理，react程序员求签实现",
     keywords: "程序员求签, 程序员求签示例，react"
   }]
